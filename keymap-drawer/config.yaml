@@ -1,5 +1,7 @@
 # configuration for https://github.com/caksoylar/keymap-drawer
 parse_config:
+  zmk_remove_keycode_prefix: ["DE_"]
+  
   raw_binding_map:
     '&sys_reset': Reset
     '&bootloader': Boot
@@ -41,6 +43,8 @@ parse_config:
     '&mkp MCLK': Middle Click
     '&mkp MB4': Back Click
     '&mkp MB5': Forward Click
+
+    '(ZMK HID USAGE(HID USAGE KEY HID USAGE KEY KEYBOARD Q))': Q
 
   zmk_combos:
     combo_tab:    {align: top, o: 0.15}
