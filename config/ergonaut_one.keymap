@@ -41,80 +41,88 @@ MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 
 &mt { quick-tap-ms = <200>; };
 
-/ {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
+ZMK_CONDITIONAL_LAYER(1 2, 4)
 
-        tri-layer {
-            if-layers = <1 2>;
-            then-layer = <4>;
-        };
-    };
+ZMK_LAYER(base,
+// ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
+    &kp TAB            &kp DE_Q           &kp DE_W           &kp DE_E           &kp DE_R           &kp DE_T               &kp DE_Z           &kp DE_U           &kp DE_I           &kp DE_O           &kp DE_P           &sl 5
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &mo 3              &hml LGUI DE_A     &hml LALT DE_S     &hml LSHIFT DE_D   &hml LCTRL DE_F    &kp DE_G               &kp DE_H           &hmr LCTRL DE_J    &hmr RSHIFT DE_K   &hmr LALT DE_L     &hmr LGUI DE_P     &mo 3
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &kp LSHIFT         &kp DE_Y           &kp DE_X           &kp DE_C           &kp DE_V           &kp DE_B               &kp DE_N           &kp DE_M           &kp DE_COMMA       &kp DE_DOT         &kp DE_MINUS       &kp RSHIFT
+// ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
+                                                             &lt 2 LEFT_WIN     &mt LCTRL BSPC     &lt 1 RET              &lt 1 ESC          &mt LCTRL SPACE    &lt 2 DEL
+//                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
+)
 
-    keymap {
-        compatible = "zmk,keymap";
+ZMK_LAYER(fun,
+// ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
+    &mt LGUI F1        &kp F2             &kp F3             &kp F4             &kp F5             &kp F6                 &kp F7             &kp F8             &kp F9             &kp F10            &kp F11            &kp F12
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &mt LCTRL PLUS     &none              &kp DE_SUPER2      &kp DE_SUPER3      &kp DE_SECT        &none                  &none              &kp DE_MU          &kp DE_SZ          &none              &none              &mt RCTRL MINUS
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &mt LALT EQUAL     &kp DE_N1          &kp DE_N2          &kp DE_N3          &kp DE_N4          &kp DE_N5              &kp DE_N6          &kp DE_N7          &kp DE_N8          &kp DE_N9          &kp DE_N0          &kp RALT
+// ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
+                                                             &trans             &trans             &trans                 &trans             &trans             &trans
+//                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
+)
 
-        default_layer {
-            bindings = <
-&kp TAB     &kp DE_Q        &kp DE_W        &kp DE_E          &kp DE_R                    &kp DE_T   &kp DE_Z   &kp DE_U         &kp DE_I          &kp DE_O        &kp DE_P        &sl 5
-&mo 3       &hml LGUI DE_A  &hml LALT DE_S  &hml LSHIFT DE_D  &hml LCTRL DE_F             &kp DE_G   &kp DE_H   &hmr LCTRL DE_J  &hmr RSHIFT DE_K  &hmr LALT DE_L  &hmr LGUI DE_P  &mo 3
-&kp LSHIFT  &kp DE_Y        &kp DE_X        &kp DE_C          &kp DE_V                    &kp DE_B   &kp DE_N   &kp DE_M         &kp DE_COMMA      &kp DE_DOT      &kp DE_MINUS    &kp RSHIFT
-                                            &lt 2 LEFT_WIN    &mt LEFT_CONTROL BACKSPACE  &lt 1 RET  &lt 1 ESC  &mt RIGHT_CONTROL SPACE  &lt 2 DEL
-            >;
-        };
+ZMK_LAYER(num,
+// ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
+    &mt LGUI KP_NUM    &kp KP_SLASH       &kp KP_N7          &kp KP_N8          &kp KP_N9          &kp KP_MINUS           &kp C_VOL_UP       &kp HOME           &kp PSCRN          &kp PG_UP          &kp SLCK           &kp CLCK
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &mt LCTRL EQUAL    &kp KP_MULTIPLY    &kp KP_N4          &kp KP_N5          &kp KP_N6          &kp KP_PLUS            &kp C_MUTE         &kp LEFT           &kp UP             &kp RIGHT          &kp INS            &mt RCTRL K_APP
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &kp LALT           &kp KP_N0          &kp KP_N1          &kp KP_N2          &kp KP_N3          &kp KP_DOT             &kp C_VOL_DN       &kp END            &kp DOWN           &kp PG_DN          &kp PAUSE_BREAK    &kp RALT
+// ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
+                                                             &trans             &trans             &trans                 &trans             &trans             &trans
+//                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
+)
 
-        lower_layer {
-            bindings = <
-&mt LGUI F1     &kp F2     &kp F3         &kp F4         &kp F5          &kp F6     &kp F7     &kp F8     &kp F9          &kp F10    &kp F11    &kp F12
-&mt LCTRL PLUS  &none      &kp DE_SUPER2  &kp DE_SUPER3  &kp DE_SECTION  &none      &none      &kp DE_MU  &kp DE_SHARP_S  &none      &none      &mt RCTRL MINUS
-&mt LALT EQUAL  &kp DE_N1  &kp DE_N2      &kp DE_N3      &kp DE_N4       &kp DE_N5  &kp DE_N6  &kp DE_N7  &kp DE_N8       &kp DE_N9  &kp DE_N0  &kp RALT
-                                          &trans         &trans          &trans     &trans     &trans     &trans
-            >;
-        };
+ZMK_LAYER(neo,
+// ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
+    &trans             &kp DE_DEGREE      &kp DE_UNDER       &kp DE_LBKT        &kp DE_RBKT        &kp DE_CARET           &kp DE_EXCL        &kp DE_LT          &kp DE_GT          &kp DE_EQUAL       &kp DE_AMPS        &kp DE_EURO
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &trans             &kp DE_BACKSLASH   &kp DE_SLASH       &kp DE_LBRC        &kp DE_RBRC        &kp DE_ASTERISK        &kp DE_QMARK       &kp DE_LPAR        &kp DE_RPAR        &kp DE_MINUS       &kp DE_COLON       &kp DE_AT_SIGN
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &trans             &kp DE_HASH        &kp DE_DOLLAR      &kp DE_PIPE        &kp DE_TILDE       &kp DE_GRAVE           &kp DE_PLUS        &kp DE_PERCENT     &kp DE_DQT         &kp DE_APOS        &kp DE_SEMI        &kp DE_DOLLAR
+// ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
+                                                             &trans             &trans             &trans                 &trans             &trans             &trans
+//                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
+)
 
-        raise_layer {
-            bindings = <
-&mt LGUI KP_NUM  &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CLCK
-&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
-&kp LALT         &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &kp RALT
-                                             &trans     &trans     &trans        &trans        &trans    &trans
-            >;
-        };
+ZMK_LAYER(sys,
+// ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
+    &bootloader        &none              &none              &none              &none              &none                  &none              &none              &none              &none              &none              &bootloader
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &bt BT_CLR         &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4           &bt BT_SEL 4       &bt BT_SEL 3       &bt BT_SEL 2       &bt BT_SEL 1       &bt BT_SEL 0       &bt BT_CLR
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &sys_reset         &none              &none              &none              &none              &none                  &none              &none              &none              &none              &none              &sys_reset
+// ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
+                                                             &trans             &to 6              &trans                 &none              &trans             &trans
+//                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
+)
 
-        neoqwertz {
-            bindings = <
-&trans  &kp DE_DEGREE     &kp DE_UNDERSCORE  &kp DE_LEFT_BRACKET  &kp DE_RIGHT_BRACKET  &kp DE_CARET     &kp DE_EXCLAMATION  &kp DE_LESS_THAN         &kp DE_GREATER_THAN       &kp DE_EQUAL         &kp DE_AMPERSAND  &kp DE_EURO
-&trans  &kp DE_BACKSLASH  &kp DE_SLASH       &kp DE_LEFT_BRACE    &kp DE_RIGHT_BRACE    &kp DE_ASTERISK  &kp DE_QUESTION     &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_MINUS         &kp DE_COLON      &kp DE_AT_SIGN
-&trans  &kp DE_HASH       &kp DE_DOLLAR      &kp DE_PIPE          &kp DE_TILDE          &kp DE_GRAVE     &kp DE_PLUS         &kp DE_PERCENT           &kp DE_DOUBLE_QUOTES      &kp DE_SINGLE_QUOTE  &kp DE_SEMICOLON  &kp DE_DOLLAR
-                                             &trans               &trans                &trans           &trans              &trans                   &trans
-            >;
-        };
+ZMK_LAYER(uml,
+// ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
+    &trans             &trans             &trans             &trans             &trans             &trans                 &trans             &kp DE_U_UMLAUT    &trans             &kp DE_O_UMLAUT    &trans             &trans
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &trans             &kp DE_A_UMLAUT    &kp DE_SZ          &trans             &trans             &trans                 &trans             &trans             &trans             &trans             &trans             &trans
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &trans             &trans             &trans             &trans             &trans             &trans                 &trans             &trans             &trans             &trans             &trans             &trans
+// ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
+                                                             &trans             &trans             &trans                 &trans             &trans             &trans
+//                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
+)
 
-        adjust_layer {
-            bindings = <
-&bootloader  &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &bootloader
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-&sys_reset   &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &sys_reset
-                                         &trans        &to 6         &trans        &none         &trans        &trans
-            >;
-        };
-
-        umlauts {
-            bindings = <
-&trans  &trans           &trans  &trans  &trans  &trans  &trans  &kp DE_U_UMLAUT  &trans  &kp DE_O_UMLAUT  &trans  &trans
-&trans  &kp DE_A_UMLAUT  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans           &trans  &trans
-&trans  &trans           &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans           &trans  &trans
-                                 &trans  &trans  &trans  &trans  &trans           &trans
-            >;
-        };
-
-        gaming {
-            bindings = <
-&trans   &kp DE_N1  &kp DE_N2  &kp DE_N3   &kp DE_N4     &kp DE_N5  &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB  &kp DE_Q   &kp DE_W   &kp DE_E    &kp DE_R      &kp DE_T   &to 0   &trans  &trans  &trans  &trans  &trans
-&trans   &kp DE_A   &kp DE_S   &kp DE_D    &kp DE_F      &kp DE_G   &trans  &trans  &trans  &trans  &trans  &trans
-                               &kp ESCAPE  &kp LEFT_ALT  &kp SPACE  &trans  &trans  &trans
-            >;
-        };
-    };
-};
+ZMK_LAYER(game,
+// ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
+    &trans             &kp DE_N1          &kp DE_N2          &kp DE_N3          &kp DE_N4          &kp DE_N5              &trans             &trans             &trans             &trans             &trans             &trans
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &kp TAB            &kp DE_Q           &kp DE_W           &kp DE_E           &kp DE_R           &kp DE_T               &to 0              &trans             &trans             &trans             &trans             &trans
+// ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
+    &trans             &kp DE_A           &kp DE_S           &kp DE_D           &kp DE_F           &kp DE_G               &trans             &trans             &trans             &trans             &trans             &trans
+// ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
+                                                             &kp ESCAPE         &kp LEFT_ALT       &kp SPACE              &trans             &trans             &trans
+//                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
+)

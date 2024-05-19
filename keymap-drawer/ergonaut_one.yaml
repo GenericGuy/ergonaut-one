@@ -1,5 +1,5 @@
 layers:
-  default:
+  base:
   - ↹
   - Q
   - W
@@ -11,8 +11,8 @@ layers:
   - I
   - O
   - P
-  - {t: umlauts, h: sticky}
-  - neoqwertz
+  - {t: uml, h: sticky}
+  - neo
   - {t: A, h: Gui}
   - {t: S, h: Alt}
   - {t: D, h: LSHIFT}
@@ -23,7 +23,7 @@ layers:
   - {t: K, h: RSHIFT}
   - {t: L, h: Alt}
   - {t: P, h: Gui}
-  - neoqwertz
+  - neo
   - LSHIFT
   - Y
   - X
@@ -36,13 +36,13 @@ layers:
   - .
   - '-'
   - RSHIFT
-  - {t: LEFT WIN, h: raise}
-  - {t: BACKSPACE, h: LEFT CONTROL}
-  - {t: ⏎, h: lower}
-  - {t: Esc, h: lower}
-  - {t: ␣, h: RIGHT CONTROL}
-  - {t: ⌦, h: raise}
-  lower:
+  - {t: LEFT WIN, h: num}
+  - {t: ⌫, h: Ctrl}
+  - {t: ⏎, h: fun}
+  - {t: Esc, h: fun}
+  - {t: ␣, h: Ctrl}
+  - {t: ⌦, h: num}
+  fun:
   - {t: F1, h: Gui}
   - F2
   - F3
@@ -59,11 +59,11 @@ layers:
   - ''
   - SUPER2
   - SUPER3
-  - SECTION
+  - SECT
   - ''
   - ''
   - MU
-  - SHARP S
+  - SZ
   - ''
   - ''
   - {t: '-', h: Ctrl}
@@ -85,7 +85,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  raise:
+  num:
   - {t: KP NUM, h: Gui}
   - KP SLASH
   - KP 7
@@ -128,7 +128,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  neoqwertz:
+  neo:
   - {t: ▽, type: trans}
   - DEGREE
   - _
@@ -171,7 +171,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  adjust:
+  sys:
   - Boot
   - ''
   - ''
@@ -209,12 +209,12 @@ layers:
   - ''
   - Reset
   - {type: held}
-  - {t: gaming, h: toggle}
+  - {t: game, h: toggle}
   - {type: held}
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  umlauts:
+  uml:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -229,6 +229,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - A UMLAUT
+  - SZ
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -256,8 +257,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  gaming:
+  game:
   - {t: ▽, type: trans}
   - '1'
   - '2'
@@ -276,7 +276,7 @@ layers:
   - E
   - R
   - T
-  - {t: default, h: toggle}
+  - {t: base, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
