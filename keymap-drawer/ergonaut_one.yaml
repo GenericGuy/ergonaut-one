@@ -11,18 +11,18 @@ layers:
   - I
   - O
   - P
-  - ACUTE
+  - {t: umlauts, h: sticky}
   - neoqwertz
-  - A
-  - S
-  - D
-  - F
+  - {t: A, h: Gui}
+  - {t: S, h: Alt}
+  - {t: D, h: LSHIFT}
+  - {t: F, h: Ctrl}
   - G
   - H
-  - J
-  - K
-  - L
-  - {t: umlauts, h: sticky}
+  - {t: J, h: Ctrl}
+  - {t: K, h: RSHIFT}
+  - {t: L, h: Alt}
+  - {t: P, h: Gui}
   - neoqwertz
   - LSHIFT
   - Y
@@ -226,7 +226,7 @@ layers:
   - {t: ▽, type: trans}
   - O UMLAUT
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - A UMLAUT
   - {t: ▽, type: trans}
@@ -237,7 +237,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
