@@ -57,13 +57,13 @@ layers:
   - F12
   - {t: +, h: Ctrl}
   - ''
-  - SUPER2
-  - SUPER3
-  - SECT
+  - ²
+  - ³
+  - §
   - ''
   - ''
-  - MU
-  - SZ
+  - µ
+  - ß
   - ''
   - ''
   - {t: '-', h: Ctrl}
@@ -86,42 +86,42 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   num:
-  - {t: KP NUM, h: Gui}
-  - KP SLASH
+  - Vol Up
+  - Print Scrn
+  - Page Up
+  - ↑
+  - Pause Break
+  - SLCK
+  - KP MULTIPLY
   - KP 7
   - KP 8
   - KP 9
   - KP MINUS
-  - Vol Up
-  - Home
-  - Print Scrn
-  - Page Up
-  - SLCK
+  - KP NUM
+  - MUTE
+  - Insert
+  - ←
+  - ↓
+  - →
   - CLCK
-  - {t: '=', h: Ctrl}
-  - KP MULTIPLY
+  - KP DIVIDE
   - KP 4
   - KP 5
   - KP 6
   - KP PLUS
-  - MUTE
-  - ←
-  - ↑
-  - →
-  - Insert
-  - {t: APP, h: Ctrl}
-  - Alt
+  - KP ENTER
+  - Vol Down
+  - Pause Break
+  - Page Down
+  - End
+  - Home
+  - APP
   - KP 0
   - KP 1
   - KP 2
   - KP 3
   - KP DOT
-  - Vol Down
-  - End
-  - ↓
-  - Page Down
-  - Pause Break
-  - Alt
+  - KP EQUAL
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -130,7 +130,7 @@ layers:
   - {t: ▽, type: trans}
   neo:
   - {t: ▽, type: trans}
-  - DEGREE
+  - °
   - _
   - '['
   - ']'
@@ -140,7 +140,7 @@ layers:
   - '>'
   - '='
   - '&'
-  - EURO
+  - €
   - {type: held}
   - \
   - /
@@ -229,7 +229,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - A UMLAUT
-  - SZ
+  - ß
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -294,8 +294,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ESCAPE
-  - LEFT ALT
+  - Esc
+  - Alt
   - ␣
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
