@@ -15,16 +15,16 @@ layers:
   - neo
   - {t: A, h: Gui}
   - {t: S, h: Alt}
-  - {t: D, h: LSHIFT}
+  - {t: D, h: Shift}
   - {t: F, h: Ctrl}
   - G
   - H
   - {t: J, h: Ctrl}
-  - {t: K, h: RSHIFT}
+  - {t: K, h: Shift}
   - {t: L, h: Alt}
   - {t: P, h: Gui}
   - neo
-  - LSHIFT
+  - Shift
   - Y
   - X
   - C
@@ -35,7 +35,7 @@ layers:
   - ','
   - .
   - '-'
-  - RSHIFT
+  - Shift
   - {t: Alt, h: num}
   - {t: ⌫, h: Ctrl}
   - {t: ⏎, h: fun}
