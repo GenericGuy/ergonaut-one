@@ -44,8 +44,6 @@ parse_config:
     '&mkp MB4': Back Click
     '&mkp MB5': Forward Click
 
-    '(ZMK HID USAGE(HID USAGE KEY HID USAGE KEY KEYBOARD Q))': Q
-
   zmk_combos:
     combo_tab:    {align: top, o: 0.15}
     combo_del:    {align: top, o: 0.15}
