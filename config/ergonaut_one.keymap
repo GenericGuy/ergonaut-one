@@ -1,5 +1,5 @@
 #ifndef KEYMAP_DRAWER
-  #include "keys_de.h"
+#include "keys_de.h"
 #endif
 
 #include <behaviors.dtsi>
@@ -12,25 +12,25 @@
 
 /* Homerow mods */
 
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5  // left hand
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // right hand
-#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5 // left hand
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5 // right hand
+#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                                 // thumbs
 
-#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
-    ZMK_HOLD_TAP(NAME, \
-        flavor = "balanced"; \
-        tapping-term-ms = <280>; \
-        quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <150>; \
-        bindings = <HOLD>, <TAP>; \
-        hold-trigger-key-positions = <TRIGGER_POS>; \
-        hold-trigger-on-release; \
-    )
+#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)               \
+    ZMK_HOLD_TAP(NAME,                                       \
+                 flavor = "balanced";                        \
+                 tapping-term-ms = <280>;                    \
+                 quick-tap-ms = <QUICK_TAP_MS>;              \
+                 require-prior-idle-ms = <150>;              \
+                 bindings = <HOLD>, <TAP>;                   \
+                 hold-trigger-key-positions = <TRIGGER_POS>; \
+                 hold-trigger-on-release;                    \
+                 )
 
-MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
-MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
+MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // left-hand HRMs
+MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // right-hand HRMs
 
-MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
+MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS) // used for HRM-combo
 
 #define DEF 0
 #define LWR 1
@@ -45,23 +45,23 @@ ZMK_CONDITIONAL_LAYER(1 2, 4)
 
 ZMK_LAYER(base,
 // ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
-    &kp TAB            &kp DE_Q           &kp DE_W           &kp DE_E           &kp DE_R           &kp DE_T               &kp DE_Z           &kp DE_U           &kp DE_I           &kp DE_O           &kp DE_P           &sl 5
+    &kp TAB            &kp DE_Q           &kp DE_W           &kp DE_E           &kp DE_R           &kp DE_T               &kp DE_Z           &kp DE_U           &kp DE_I           &kp DE_O           &kp DE_P           &mo 5
 // ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
     &mo 3              &hml LGUI DE_A     &hml LALT DE_S     &hml LSHIFT DE_D   &hml LCTRL DE_F    &kp DE_G               &kp DE_H           &hmr LCTRL DE_J    &hmr RSHIFT DE_K   &hmr LALT DE_L     &hmr LGUI DE_P     &mo 3
 // ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
     &kp LSHIFT         &kp DE_Y           &kp DE_X           &kp DE_C           &kp DE_V           &kp DE_B               &kp DE_N           &kp DE_M           &kp DE_COMMA       &kp DE_DOT         &kp DE_MINUS       &kp RSHIFT
 // ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
-                                                             &lt 2 LEFT_WIN     &mt LCTRL BSPC     &lt 1 RET              &lt 1 ESC          &mt LCTRL SPACE    &lt 2 DEL
+                                                             &lt 2 LALT         &mt LCTRL BSPC     &lt 1 RET              &lt 1 ESC          &mt LCTRL SPACE    &lt 2 DEL
 //                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
 )
 
 ZMK_LAYER(fun,
 // ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
-    &mt LGUI F1        &kp F2             &kp F3             &kp F4             &kp F5             &kp F6                 &kp F7             &kp F8             &kp F9             &kp F10            &kp F11            &kp F12
+    &kp LGUI           &kp F9             &kp F10            &kp F11            &kp F12            &kp LGUI               &kp DE_ASTERISK    &kp DE_N7          &kp DE_N8          &kp DE_N9          &kp DE_COMMA       &trans 
 // ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-    &mt LCTRL PLUS     &none              &kp DE_SUPER2      &kp DE_SUPER3      &kp DE_SECT        &none                  &none              &kp DE_MU          &kp DE_SZ          &none              &none              &mt RCTRL MINUS
+    &kp LCTRL          &kp F5             &kp F6             &kp F7             &kp F8             &kp LCTRL              &kp DE_SLASH       &kp DE_N4          &kp DE_N5          &kp DE_N6          &kp DE_PLUS        &trans 
 // ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-    &mt LALT EQUAL     &kp DE_N1          &kp DE_N2          &kp DE_N3          &kp DE_N4          &kp DE_N5              &kp DE_N6          &kp DE_N7          &kp DE_N8          &kp DE_N9          &kp DE_N0          &kp RALT
+    &kp LALT           &kp F1             &kp F2             &kp F3             &kp F4             &kp LALT               &kp DE_N0          &kp DE_N1          &kp DE_N2          &kp DE_N3          &kp DE_MINUS       &trans 
 // ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
                                                              &trans             &trans             &trans                 &trans             &trans             &trans
 //                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
@@ -69,11 +69,11 @@ ZMK_LAYER(fun,
 
 ZMK_LAYER(num,
 // ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
-    &kp C_VOL_UP       &kp PSCRN          &kp PG_UP          &kp UP             &kp PAUSE_BREAK    &kp SLCK               &kp KP_MULTIPLY    &kp KP_N7          &kp KP_N8          &kp KP_N9          &kp KP_MINUS       &kp KP_NUM
+    &kp C_VOL_UP       &kp PSCRN          &kp PG_UP          &kp UP             &kp PAUSE_BREAK    &kp SLCK               &kp KP_MULTIPLY    &kp KP_N7          &kp KP_N8          &kp KP_N9          &kp KP_DOT         &kp KP_NUM
 // ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
     &kp C_MUTE         &kp INS            &kp LEFT           &kp DOWN           &kp RIGHT          &kp CLCK               &kp KP_DIVIDE      &kp KP_N4          &kp KP_N5          &kp KP_N6          &kp KP_PLUS        &kp KP_ENTER
 // ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-    &kp C_VOL_DN       &kp PAUSE_BREAK    &kp PG_DN          &kp END            &kp HOME           &kp K_APP              &kp KP_N0          &kp KP_N1          &kp KP_N2          &kp KP_N3          &kp KP_DOT         &kp KP_EQUAL
+    &kp C_VOL_DN       &kp PAUSE_BREAK    &kp PG_DN          &kp END            &kp HOME           &kp K_APP              &kp KP_N0          &kp KP_N1          &kp KP_N2          &kp KP_N3          &kp KP_MINUS       &kp KP_EQUAL
 // ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
                                                              &trans             &trans             &trans                 &trans             &trans             &trans
 //                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
@@ -105,11 +105,11 @@ ZMK_LAYER(sys,
 
 ZMK_LAYER(uml,
 // ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
-    &trans             &trans             &trans             &trans             &trans             &trans                 &trans             &kp DE_U_UMLAUT    &trans             &kp DE_O_UMLAUT    &trans             &trans
+    &trans             &trans             &trans             &trans             &trans             &trans                 &trans             &kp DE_U_UMLAUT    &trans             &kp DE_O_UMLAUT    &kp DE_SECT        &trans
 // ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
     &trans             &kp DE_A_UMLAUT    &kp DE_SZ          &trans             &trans             &trans                 &trans             &trans             &trans             &trans             &trans             &trans
 // ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-    &trans             &trans             &trans             &trans             &trans             &trans                 &trans             &trans             &trans             &trans             &trans             &trans
+    &trans             &trans             &trans             &trans             &trans             &trans                 &trans             &kp DE_MU          &kp DE_SUPER2      &kp DE_SUPER3      &trans             &trans
 // ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
                                                              &trans             &trans             &trans                 &trans             &trans             &trans
 //                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯

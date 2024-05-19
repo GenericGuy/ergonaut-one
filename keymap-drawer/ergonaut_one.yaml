@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - P
-  - {t: uml, h: sticky}
+  - uml
   - neo
   - {t: A, h: Gui}
   - {t: S, h: Alt}
@@ -36,49 +36,49 @@ layers:
   - .
   - '-'
   - RSHIFT
-  - {t: LEFT WIN, h: num}
+  - {t: Alt, h: num}
   - {t: ⌫, h: Ctrl}
   - {t: ⏎, h: fun}
   - {t: Esc, h: fun}
   - {t: ␣, h: Ctrl}
   - {t: ⌦, h: num}
   fun:
-  - {t: F1, h: Gui}
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
+  - Gui
   - F9
   - F10
   - F11
   - F12
-  - {t: +, h: Ctrl}
-  - ''
-  - ²
-  - ³
-  - §
-  - ''
-  - ''
-  - µ
-  - ß
-  - ''
-  - ''
-  - {t: '-', h: Ctrl}
-  - {t: '=', h: Alt}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
+  - Gui
+  - '*'
   - '7'
   - '8'
   - '9'
-  - '0'
+  - ','
+  - {t: ▽, type: trans}
+  - Ctrl
+  - F5
+  - F6
+  - F7
+  - F8
+  - Ctrl
+  - /
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - {t: ▽, type: trans}
   - Alt
+  - F1
+  - F2
+  - F3
+  - F4
+  - Alt
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - '-'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -96,7 +96,7 @@ layers:
   - KP 7
   - KP 8
   - KP 9
-  - KP MINUS
+  - KP DOT
   - KP NUM
   - MUTE
   - Insert
@@ -120,7 +120,7 @@ layers:
   - KP 1
   - KP 2
   - KP 3
-  - KP DOT
+  - KP MINUS
   - KP EQUAL
   - {type: held}
   - {t: ▽, type: trans}
@@ -225,7 +225,7 @@ layers:
   - U UMLAUT
   - {t: ▽, type: trans}
   - O UMLAUT
-  - {t: ▽, type: trans}
+  - §
   - {type: held}
   - {t: ▽, type: trans}
   - A UMLAUT
@@ -246,9 +246,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - µ
+  - ²
+  - ³
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
