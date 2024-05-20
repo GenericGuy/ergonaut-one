@@ -24,7 +24,7 @@ layers:
   - {t: L, h: Alt}
   - {t: P, h: Gui}
   - neo
-  - Shift
+  - {t: Shift, h: sticky, s: Caps Word}
   - Y
   - X
   - C
@@ -35,7 +35,7 @@ layers:
   - ','
   - .
   - '-'
-  - Shift
+  - {t: Shift, h: sticky, s: Caps Word}
   - {t: Esc, h: num}
   - {t: Alt, h: Ctrl}
   - {t: ⏎, h: fun}
