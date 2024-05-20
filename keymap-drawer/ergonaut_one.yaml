@@ -36,10 +36,10 @@ layers:
   - .
   - '-'
   - Shift
-  - {t: Alt, h: num}
-  - {t: ⌫, h: Ctrl}
+  - {t: Esc, h: num}
+  - {t: Alt, h: Ctrl}
   - {t: ⏎, h: fun}
-  - {t: Esc, h: fun}
+  - {t: ⌫, h: fun}
   - {t: ␣, h: Ctrl}
   - {t: ⌦, h: num}
   fun:
