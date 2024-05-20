@@ -31,9 +31,18 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // right-hand HRMs
 
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
+&caps_word {
+    continue-list = <DE_UNDER DE_MINUS BSPC>;
+};
 ZMK_MOD_MORPH(smart_shft,
     bindings = <&sk LSHFT>, <&caps_word>;
     mods = <(MOD_LSFT)>;
+)
+
+// tap: ctrl | double-tap: alt
+ZMK_TAP_DANCE(ctrl_alt,
+    tapping-term-ms = <200>;
+    bindings = <&kp LCTRL>, <&kp LALT>;
 )
 
 
@@ -51,7 +60,7 @@ ZMK_LAYER(base,
 // ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
     &smart_shft        &kp DE_Y           &kp DE_X           &kp DE_C           &kp DE_V           &kp DE_B               &kp DE_N           &kp DE_M           &kp DE_COMMA       &kp DE_DOT         &kp DE_MINUS       &smart_shft
 // ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
-                                                             &lt 2 ESC          &mt LCTRL LALT     &lt 1 RET              &lt 1 BSPC         &mt LCTRL SPACE    &lt 2 DEL
+                                                             &lt 2 ESC          &ctrl_alt          &lt 1 RET              &lt 1 BSPC         &mt LCTRL SPACE    &lt 2 DEL
 //                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
 )
 

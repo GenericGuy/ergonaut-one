@@ -37,7 +37,7 @@ layers:
   - '-'
   - {t: Shift, h: sticky, s: Caps Word}
   - {t: Esc, h: num}
-  - {t: Alt, h: Ctrl}
+  - '&ctrl_alt'
   - {t: ⏎, h: fun}
   - {t: ⌫, h: fun}
   - {t: ␣, h: Ctrl}
