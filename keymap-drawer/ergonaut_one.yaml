@@ -37,7 +37,7 @@ layers:
   - '-'
   - {t: Shift, h: sticky, s: Caps Word}
   - {t: Esc, h: num}
-  - '&ctrl_alt'
+  - Ctrl Alt
   - {t: ⏎, h: fun}
   - {t: ⌫, h: fun}
   - {t: ␣, h: Ctrl}
@@ -222,13 +222,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - U UMLAUT
+  - Ü
   - {t: ▽, type: trans}
-  - O UMLAUT
+  - Ö
   - §
   - {type: held}
   - {t: ▽, type: trans}
-  - A UMLAUT
+  - Ä
   - ß
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -295,7 +295,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Esc
-  - Alt
+  - {t: ▽, type: trans}
   - ␣
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
