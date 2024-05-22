@@ -1,5 +1,5 @@
 layers:
-  base:
+  def:
   - ↹
   - Q
   - W
@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - P
-  - uml
+  - CANCEL
   - neo
   - {t: A, h: Gui}
   - {t: S, h: Alt}
@@ -22,7 +22,7 @@ layers:
   - {t: J, h: Ctrl}
   - {t: K, h: Shift}
   - {t: L, h: Alt}
-  - {t: P, h: Gui}
+  - Gui uml
   - neo
   - {t: Shift, h: sticky, s: Caps Word}
   - Y
@@ -226,7 +226,7 @@ layers:
   - {t: ▽, type: trans}
   - Ö
   - §
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ä
   - ß
@@ -276,7 +276,7 @@ layers:
   - E
   - R
   - T
-  - {t: base, h: toggle}
+  - {t: def, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
