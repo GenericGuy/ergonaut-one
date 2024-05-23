@@ -182,6 +182,11 @@ parse_config:
     A_UMLAUT: 'Ä'
     O_UMLAUT: 'Ö'
     U_UMLAUT: 'Ü'
+    CANCEL: Cancel
+    MUTE: Mute
+    SCLK: Scroll Lock
+    CLCK: Caps Lock
+    APP: Menu
 draw_config:
   footer_text: 'Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>'
   dark_mode: auto

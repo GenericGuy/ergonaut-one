@@ -41,7 +41,7 @@
                  flavor = "balanced";                        \
                  tapping-term-ms = <280>;                    \
                  quick-tap-ms = <175>;                       \
-                 require-prior-idle-ms = <150>;              \
+                 require-prior-idle-ms = <250>;              \
                  bindings = <HOLD>, <TAP>;                   \
                  hold-trigger-key-positions = <TRIGGER_POS>; \
                  hold-trigger-on-release;                    \
@@ -72,7 +72,7 @@ ZMK_TAP_DANCE(ctrl_alt,
 // tap: gui | double-tap: UML layer
 ZMK_TAP_DANCE(gui_uml,
     tapping-term-ms = <300>;
-    bindings = <&kp LGUI>, <&mo UML>;
+    bindings = <&kp LGUI>, <&sl UML>;
 )
 
 //-------------------------------------------------------------------------------------------------------------------//
