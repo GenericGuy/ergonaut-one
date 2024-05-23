@@ -40,7 +40,7 @@ layers:
   - Ctrl Alt
   - {t: ⏎, h: fun}
   - {t: ⌫, h: fun}
-  - {t: ␣, h: Ctrl}
+  - ␣
   - {t: ⌦, h: num}
   fun:
   - Gui
@@ -91,7 +91,7 @@ layers:
   - Page Up
   - ↑
   - Pause Break
-  - SLCK
+  - Scroll Lock
   - KP MULTIPLY
   - KP 7
   - KP 8
