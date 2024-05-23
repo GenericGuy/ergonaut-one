@@ -184,9 +184,9 @@ parse_config:
     U_UMLAUT: 'Ü'
     CANCEL: Cancel
     MUTE: Mute
-    SCLK: Scroll Lock
+    SLCK: Scroll Lock
     CLCK: Caps Lock
-    APP: Menu
+    APPLICATION: Menu
 draw_config:
   footer_text: 'Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>'
   dark_mode: auto
