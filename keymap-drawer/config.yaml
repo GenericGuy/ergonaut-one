@@ -9,7 +9,7 @@ parse_config:
     '&caps_word': Caps Word
     '&inv_qm': ¿
     '&ctrl_alt': Ctrl Alt
-    '&gui_uml': Gui uml
+    '&uml_gui': uml Gui
 
     '&kp LC(LG(LEFT))': Desk Left
     '&kp LC(LG(RIGHT))': Desk Right

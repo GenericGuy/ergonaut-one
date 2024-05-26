@@ -22,7 +22,7 @@ layers:
   - {t: J, h: Shift}
   - {t: K, h: Ctrl}
   - {t: L, h: Alt}
-  - '&uml_gui'
+  - uml Gui
   - neo
   - {t: Shift, h: sticky, s: Caps Word}
   - Y
@@ -295,7 +295,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Esc
-  - {t: ▽, type: trans}
+  - Ctrl Alt
   - ␣
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
