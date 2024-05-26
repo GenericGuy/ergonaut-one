@@ -15,14 +15,14 @@ layers:
   - neo
   - {t: A, h: Gui}
   - {t: S, h: Alt}
-  - {t: D, h: Shift}
-  - {t: F, h: Ctrl}
+  - {t: D, h: Ctrl}
+  - {t: F, h: Shift}
   - G
   - H
-  - {t: J, h: Ctrl}
-  - {t: K, h: Shift}
+  - {t: J, h: Shift}
+  - {t: K, h: Ctrl}
   - {t: L, h: Alt}
-  - Gui uml
+  - '&uml_gui'
   - neo
   - {t: Shift, h: sticky, s: Caps Word}
   - Y
@@ -36,8 +36,8 @@ layers:
   - .
   - '-'
   - {t: Shift, h: sticky, s: Caps Word}
+  - ↹
   - {t: Esc, h: num}
-  - Ctrl Alt
   - {t: ⏎, h: fun}
   - {t: ⌫, h: fun}
   - ␣
@@ -87,11 +87,11 @@ layers:
   - {t: ▽, type: trans}
   num:
   - Vol Up
-  - Print Scrn
   - Page Up
+  - Print Scrn
   - ↑
   - Pause Break
-  - Scroll Lock
+  - INSERT
   - KP MULTIPLY
   - KP 7
   - KP 8
@@ -99,7 +99,7 @@ layers:
   - KP DOT
   - KP NUM
   - MUTE
-  - Insert
+  - Page Down
   - ←
   - ↓
   - →
@@ -112,9 +112,9 @@ layers:
   - KP ENTER
   - Vol Down
   - Pause Break
-  - Page Down
-  - End
-  - Home
+  - Ctl+ X
+  - Ctl+ C
+  - Ctl+ V
   - APP
   - KP 0
   - KP 1
@@ -122,8 +122,8 @@ layers:
   - KP 3
   - KP MINUS
   - KP EQUAL
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -208,8 +208,8 @@ layers:
   - ''
   - ''
   - Reset
-  - {type: held}
-  - {t: game, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: game, h: toggle, type: held}
   - {type: held}
   - ''
   - {t: ▽, type: trans}
