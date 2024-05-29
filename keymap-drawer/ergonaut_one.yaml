@@ -22,7 +22,7 @@ layers:
   - {t: J, h: Shift}
   - {t: K, h: Ctrl}
   - {t: L, h: Alt}
-  - uml Gui
+  - {t: uml, h: Gui}
   - neo
   - {t: Shift, h: sticky, s: Caps Word}
   - Y
@@ -237,7 +237,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -294,8 +294,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Esc
   - Ctrl Alt
+  - Esc
   - ␣
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
