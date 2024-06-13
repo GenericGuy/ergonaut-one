@@ -258,7 +258,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   game:
-  - {t: ▽, type: trans}
+  - Esc
   - '1'
   - '2'
   - '3'
@@ -294,9 +294,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctrl Alt
-  - Esc
+  - Alt
   - ␣
+  - Ctrl
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
